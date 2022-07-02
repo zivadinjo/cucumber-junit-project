@@ -22,6 +22,7 @@ Feature: Library app login feature
     And user enters student password
     Then user should see dashboard
 
+  @smoke
   Scenario: Login as admin
     #Given user is on the library login page
     When user enters admin username
