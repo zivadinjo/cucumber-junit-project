@@ -25,7 +25,7 @@ public class Driver {
 //         if you already setup driver and using it again for following line of codes, it will return to same driver
 
         if(driver == null){
-//            We read browserType from configuration.properties with help of ConfigurationReader class and getProperty() method
+//            We read browserType from configuration.properties with help of ConfigurationReader class and getProperty() method.
             String browserType = ConfigurationReader.getProperty("browser");
 
             switch (browserType){
