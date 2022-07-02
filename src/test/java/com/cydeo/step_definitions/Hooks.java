@@ -3,6 +3,8 @@ package com.cydeo.step_definitions;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
@@ -16,6 +18,9 @@ public class Hooks {
     @After
     public void tearDownScenario(){
         System.out.println("--> It is coming from @After in Hooks");
+
+        byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+
         Driver.closeDriver();
     }
 
