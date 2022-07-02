@@ -26,4 +26,17 @@ public class GoogleSearch {
 
     }
 
+    @When("User types {string} in the google search box and click enter")
+    public void userTypesInTheGoogleSearchBoxAndClickEnter(String searchKeyword) {
+
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+
+    }
+
+    @Then("User sees {string} is in the google title")
+    public void userSeesIsInTheGoogleTitle(String expectedTitle) {
+
+        Assert.assertEquals("Title verification failed!",expectedTitle,Driver.getDriver().getTitle());
+
+    }
 }

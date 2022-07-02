@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@wip"
+        tags = "@wip and @smoke"  //it will run only tags that are included here ex. "@wip"  , ex."@wip or @smoke" , ex."@wip and @smoke" , ex. "@wip and not @smoke"
 )
 
 public class Runner {
