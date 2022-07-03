@@ -55,4 +55,18 @@ public class GoogleSearch {
 
     }
 
+    @When("User searches for {string} capital")
+    public void user_searches_for_capital(String countryName) {
+
+        googleSearchPage.searchBox.sendKeys("what is capital of " + countryName+Keys.ENTER);
+
+    }
+    @Then("User should see {string} result")
+    public void user_should_see_result(String capitalCity) {
+
+        googleSearchPage.capitalText.getText();
+        Assert.assertEquals("Verification failed!",capitalCity,googleSearchPage.capitalText.getText());
+
+    }
+
 }
