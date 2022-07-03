@@ -20,4 +20,10 @@ public class WebTableLoginPage {
     @FindBy(xpath = "//button[.='Login']")
     public WebElement loginBtn;
 
+    public void login(String username, String password){
+        inputUserName.sendKeys(username);
+        inputPassword.sendKeys(password);
+        loginBtn.click();
+    }
+
 }
