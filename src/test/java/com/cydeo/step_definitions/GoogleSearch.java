@@ -8,6 +8,8 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class GoogleSearch {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
@@ -39,4 +41,18 @@ public class GoogleSearch {
         Assert.assertEquals("Title verification failed!",expectedTitle,Driver.getDriver().getTitle());
 
     }
+
+    @Then("User should be able to search for following:")
+    public void user_should_be_able_to_search_for_following(List<String> searchKeywords) {
+
+        System.out.println("searchKeywords: " + searchKeywords);
+
+        for (String each : searchKeywords) {
+            googleSearchPage.searchBox.clear();
+            googleSearchPage.searchBox.sendKeys(each+Keys.ENTER);
+            Assert.assertEquals(each+" - Google Search",Driver.getDriver().getTitle());
+        }
+
+    }
+
 }
