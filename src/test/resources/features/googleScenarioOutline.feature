@@ -7,3 +7,10 @@ Feature: Data Driven testing using Scenario Outline
     Then User should see "<capital>" result
     Examples:
     |country|capital|
+    | Azerbaijan  | Baku          |
+    | Tajikistan  | Dushanbe      |
+    | Bulgaria    | Sofia         |
+    | Ukraine     | Kiev          |
+    | Afghanistan | Kabul         |
+    | USA         | Washington DC |
+    | Turkey      | Ankara        |
