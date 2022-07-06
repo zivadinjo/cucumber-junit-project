@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        dryRun = false,
+        dryRun = true,
         tags = "@wip"  //it will run only tags that are included here ex. "@wip"  , ex."@wip or @smoke" , ex."@wip and @smoke" , ex. "@wip and not @smoke"
 )
 
