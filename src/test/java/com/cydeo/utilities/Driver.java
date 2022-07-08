@@ -18,7 +18,7 @@ public class Driver {
 //    We make WebDriver private,because we want to close access from outside class
 //    We make it static,because we will use it in static method
 //    private static WebDriver driver; // values is null by default
-//    commented out so we can make driver for multiple tread usage-parallel running(driverPool)
+//    commented out so we can make driver for multiple thread usage-parallel running(driverPool)
 
     public static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();//InheritableThreadLocal is giving us opportunity to use driverPool and use multiple drivers/one driver per thread(one driver per page,multiple page,multiple driver)
 
